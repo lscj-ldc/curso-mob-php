@@ -72,4 +72,59 @@
     if($bc > $cd) {
         echo "<br> $bc é maior do que $cd";
     }
-    ?>
+    # Aprendendo Switch
+    echo "<br> Utilizando Switch";
+    $numero = 2;
+    switch($numero) {
+        case 1:
+            $mensagem = "Número 1";
+            break;
+        case 2:
+            $mensagem = "Número 2";
+            break;
+        case 3;
+            $mensagem = "Número 3";
+            break;
+        case 4;
+            $mensagem = "Número 4";
+            break;
+        default:
+            $mensagem = "Outro Número";
+    }
+    echo "<br> Você selecionou $mensagem <br>";
+    # Utilizando while em PHP
+    echo ("<br> Utilizando while em PHP");
+    # Ao informar um valor, ele irá até o valor informado no while
+    $seis = 1;
+    # O valor informado na variável sete, irá contar até chegar em 10
+    while($seis <=10) {
+        echo "<br> Número $seis";
+        $seis = $seis +1;
+    }
+    # Utilizando do while em PHP
+    echo "<br><br> Utilizando do while em PHP";
+    $sete = 1;
+    # Abaixo do será executado ao menos uma vez, ou seja, se a variável sete for maior do que a declarada em while, este valor será apresentado na tela.
+    do{
+        echo "<br> Número $sete";
+        $sete++;
+    }while($sete <=10);
+    # Utilizando for em PHP
+    echo "<br><br> Utilizando FOR em PHP";
+    for($oito=1; $oito<=15; $oito++) {
+        $resto = $oito % 2;
+        if($resto ==0) {
+            echo "<br> Número Pares: $oito";
+        }
+    }
+    # Utilizando array em PHP
+    echo "<br><br>Utilizando array em php";
+    $carros = array("Gol","Uno","Meriva");
+    echo "<br> $carros[0]";
+    echo "<br> $carros[1]";
+    echo "<br> $carros[2]";
+    $carrosval = array("Gol"=>"34.000","Uno"=>"33.000","Meriva"=>"48.000");
+    echo "<br>" .$carrosval['Gol'];
+    echo "<br>" .$carrosval['Meriva'];
+    echo "<br>" .$carrosval['Uno'];
+;    ?>
