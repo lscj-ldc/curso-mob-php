@@ -40,4 +40,36 @@
     echo "<br> Valor de X é: $x";
     echo "<br> O valor de X é: $x1";
     echo "<br> Valor de X é: $x2";
+    echo "<br> Expressões condicionais e operadores de comparação";
+    $ab = 5;
+    $bc = 6;
+    $cd = 5;
+    # Valores apresentados
+    # Operadores menor
+    if($ab < $bc) {
+        echo "<br> $ab é menor do que $bc";
+    }
+    # Operadores menor ou igual
+    if($ab <= $cd) {
+        echo "<br> $ab é menor ou igual a $cd";
+    }
+    # Operadores igual
+    if($ab == $cd) {
+        echo "<br> $ab é igual a $cd";
+    }
+    # Operadores diferentes
+    if($ab != $bc) {
+        echo "<br> $ab é diferente de $bc";
+    }
+    # Operadores usando a função if e else
+    if($ab < $bc) {
+        echo "<br> $ab é menor do que $bc";
+    }else if($bc > $ab) {
+        echo "<br> $bc é maior do que $ab";
+    }else{
+        echo "<br> $ab é igual a $cd";
+        }
+    if($bc > $cd) {
+        echo "<br> $bc é maior do que $cd";
+    }
     ?>
