@@ -127,4 +127,30 @@
     echo "<br>" .$carrosval['Gol'];
     echo "<br>" .$carrosval['Meriva'];
     echo "<br>" .$carrosval['Uno'];
-;    ?>
+    # Utilizando o foreach em php
+    echo "<br><br> Utilizando o foreach em php";
+    $carro2 = array("Gol"=>"R$34.000,00","Uno"=>"R$33.000,00","Meriva"=>"R$48.000,00");
+    foreach($carro2 as $carror => $valor3) {
+        echo "<br>". $carror. ": ".$valor3;
+    }
+    # Utilizando funções no PHP
+    echo "<br><br> Utilizando funções em php";
+    function soma($soma1, $soma2) {
+        $s = $soma1 + $soma2;
+        return $s;
+    }
+    $res = soma(4,6);
+    echo "<br> SOMA: $res";
+    # Utilizando funções no php
+    function somar() {
+        $p = func_get_args();
+        $t = func_num_args();
+        $sy = 0;
+        for($y=0;$y<$t;$y++) {
+            $sy += $p[$y];
+        }
+        return $sy;
+    }
+    $resultado = somar(4,6,10,30);
+    echo "<br> A soma dos valores é: $resultado";
+?>
