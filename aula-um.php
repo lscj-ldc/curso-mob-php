@@ -153,4 +153,35 @@
     }
     $resultado = somar(4,6,10,30);
     echo "<br> A soma dos valores é: $resultado";
+    # Funções nativas do php
+    echo "<br><br> Funções nativas do php";
+    $qtd = strlen("Curso de Linux"); # strlen conta caracteres, inclusive os acentos.
+    $qtdmb = mb_strlen("Olá mundo"); # mb_strlen desconsidera os acentos.
+    echo "<br> Quantidade de Caracteres: $qtd";
+    echo "<br> Quantidade de Caracteres: $qtdmb";
+    # contador de palavras
+    $palavras = str_word_count("Curso de Linux");
+    echo "<br> Quantidade de palavras: $palavras";
+    # contador de caracteres, inclusive os espaços
+    $espacos = strlen("Bom dia!");
+    echo "<br> Quantidade de caracteres: $espacos";
+    # contador de caracteres, excluindo os espaços
+    $espaco = strlen(trim("bom dia!"));
+    echo "<br> Quantidade de caracteres: $espaco";
+    # contador de caracteres, remove somente os espaços a esquerda
+    $espacoe = strlen(ltrim(" Bom dia! "));
+    echo "<br> Quantidade de caracteres: $espacoe";
+    # contador de caracteres, remove somente os espaços a direita
+    $espacor = strlen(rtrim("  Bom dia! "));
+    echo ("<br> Quantidade de caracteres, desconsiderando os espaços a direita: $espacor");
+    # Quebra uma estringue, e separa os itens em um vetor
+    $exp = "Curso de Linux";
+    $vetor = explode(" ", $exp);
+    echo "<br>";
+    print_r($vetor); # Tem a mesma função do echo, porem ele exibe os dados com mais detalhes.
+    # Quebra um stringue mais detalhada
+    $exp1 = "<br>Curso de Linux";
+    $vetor2 = explode(" ", $exp1);
+    echo "<br>";
+    var_dump($vetor2);
 ?>
