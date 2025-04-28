@@ -179,9 +179,48 @@
     $vetor = explode(" ", $exp);
     echo "<br>";
     print_r($vetor); # Tem a mesma função do echo, porem ele exibe os dados com mais detalhes.
-    # Quebra um stringue mais detalhada
+    # Quebra um string mais detalhada
     $exp1 = "<br>Curso de Linux";
     $vetor2 = explode(" ", $exp1);
     echo "<br>";
     var_dump($vetor2);
+    # Transformando um vetor em string
+    $val[0]="Seja";
+    $val[1]="Bem";
+    $val[2]="Vindo";
+    $texto = implode(" ",$val);
+    print("<br><br>" .$texto);
+    # Coloca cada letra de um string, na posição de um vetor, ou seja, ela separa letra por letra.
+    $nome = "Luís";
+    $letras = str_split($nome);
+    echo "<br><br>";
+    print_r($letras);
+    # Substituir uma palavra ou uma letra dentro de uma string, por outra palavra ou outra letra.
+    $frase = "Gosto de estudar programação";
+    $novafrase = str_replace("programação","php",$frase);
+    echo "<br>$novafrase<br>";
+    # Extrair pedaço de um texto.
+    $substring = substr($frase,9,7);
+    echo "<br> $substring <br>";
+    # Conversão de caracteres para maiusculo
+    $maiusculo = strtoupper($novafrase);
+    echo "$maiusculo <br>";
+    # Conversão de caracteres para minusculo
+    $varm = "BOM DIA!";
+    $minusculo = strtolower($varm);
+    echo "$minusculo<br>";
+    # Conversão do primeiro caracter em maiusculo
+    $nomem = ucfirst("eu te amo.");
+    echo "$nomem <br>";
+    # Conversão da primeira palavra para maiuscula
+    $nomemm = ucwords("luciene dias carneiro");
+    echo "$nomemm <br>";
+    # Utilizando sessões no php
+    echo "<hr>";
+    echo "Utilizando sessões no php <br>";
+    session_start();
+    $_SESSION['usuario'] = "Luís";
+    $_SESSION['nivel'] = 1;
+    echo "<br>";
 ?>
+<a href="aula-exemplo.php">Ir para outra página</a>
